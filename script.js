@@ -27,11 +27,7 @@ button.addEventListener('click', () =>{
 
     
     });
-//     const url1 = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Vodka';
-    
-// async function getDrinks(${url1}){
-//     const x = await
-// }
+
 });
 
 
