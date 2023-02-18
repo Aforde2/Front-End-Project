@@ -41,6 +41,7 @@ fetch('https://drinks-digital1.p.rapidapi.com/v1/cocktails?limit=20', options)
    
 
     
+<<<<<<< HEAD
 //     });
 
 });
@@ -87,7 +88,18 @@ foodBtn.addEventListener('click', () =>{
    
     // console.log(vegan);
 });
+=======
+    });
+<<<<<<< HEAD
+//     const url1 = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Vodka';
+    
+// async function getDrinks(${url1}){
+//     const x = await
+// }
+=======
+>>>>>>> main
 
+>>>>>>> 81d0b0edc68f9bfb236cd5e4c35e4a01f9570bae
 });
 
 
