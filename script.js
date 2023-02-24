@@ -92,9 +92,9 @@ fetch(`https://drinks-digital1.p.rapidapi.com/v1/cocktails?limit=20`, options)
                 const div1 = document.createElement('div');
         
             
-            drinkContainer.innerHTML = `<div class="card w-60" style="width: 20rem; height: auto;">
+            drinkContainer.innerHTML = `<div id="drinkCard" class="card w-60" style="width: 20rem; height: auto;">
            
-            <img src="${imgPlaceholder}"  alt="placeholder-image"/>
+            <img src="${imgPlaceholder}" div id="drinkImage" alt="placeholder-image"/>
             <h3>${cocktailName}</h3>
             <p class="card text-center"><small class="text-muted">serves: ${garnish}</small></p>
 
@@ -132,18 +132,17 @@ foodBtn.addEventListener('click', () => {
             const title = element.title;
             const instructions =element.instructions;
             const servings =element.servings;
-            const summary =element.summary;
+            // const summary =element.summary;
             const foodContainer = document.getElementById('content-container2');
             
             
             
-        foodContainer.innerHTML = `<div class="card w-60" style="width: 20rem; height: auto;">
-        <img src="${img_src}" class="card-img-top" alt="...">
+        foodContainer.innerHTML = `<div id="foodCard" class="card w-60" style="width: 20rem; height: auto;">
+        <img src="${img_src}" div id="foodImage" class="card-img-top" alt="...">
         <h3>${title}</h3>
         <p class="card text-center"><small class="text-muted">serves: ${servings}</small></p>
         <div class="card-body">
         <p class="card-text"><small>${instructions}</small></p>
-        <p class="card-footer"><small class="text muted"${summary}</small></p>
         </div>
         </div>`
         });
