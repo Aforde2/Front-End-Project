@@ -5,6 +5,8 @@ const searchFoodBtn = document.getElementById('searchFood');
 const searchDrinkBtn = document.getElementById('searchDrink')
 const userInput = document.getElementById('userSearch')
 const userSelectionDisplay = document.getElementById('userSelectionDisplay')
+const drinkContainer = document.getElementById('content-container1');
+const foodContainer = document.getElementById('content-container2');
 let randomNum = Math.floor(Math.random() * (20 - 1 + 1) + 1); //<== random number between 1-20
 console.log(randomNum);
 
@@ -26,12 +28,19 @@ searchDrinkBtn.addEventListener("click", (e) => {
             let description = data[0].description
             const imgPlaceholder = './Cocktail_Bar_Image.webp'
             newDiv.innerHTML = `
-            <img src="${imgPlaceholder}" />
-            <h2>${name}</h2>
-            <h6>${description}</h6>
+            <div id="drink-search" class="card" style="width: 18rem;">
+            <img src="${imgPlaceholder}" class="card-img-top" >
+            <div class="card-body"> 
+            <h2 class="card-text">${name}</h2>
+            <h6 class="card-footer">${description}</h6>
+            </div>
+            </div>
             `
-            userSelectionDisplay.appendChild(newDiv)   
-
+            drinkContainer.appendChild(newDiv)  
+            
+            {/* <img src="${imgPlaceholder}" />
+            <h2>${name}</h2>
+            <h6>${description}</h6> */}
 
 
 
@@ -52,11 +61,15 @@ searchFoodBtn.addEventListener("click", (e) => {
         let image = data.menuItems[0].image
         let servings = data.menuItems[0].servings.number
         newDiv.innerHTML = `
-        <img src="${image}" />
-        <h2>${title}</h2>
-        <h6>${servings}</h6>
+        <div id="food-search" class="card" style="width: 18rem;">
+        <img src="${image}" class="card-img-top" >
+        <div class="card-body"> 
+        <h2 class="card-text">${title}</h2>
+        <h6 class="card-footer">${servings}</h6>
+        </div>
+        </div>
         `
-        userSelectionDisplay.appendChild(newDiv)
+        foodContainer.appendChild(newDiv)
         console.log(image)
 
 
@@ -88,7 +101,7 @@ fetch(`https://drinks-digital1.p.rapidapi.com/v1/cocktails?limit=20`, options)
         //         // const ingredient = element.ingredients.ingredient.name;
         //         const img_src2 = element.glasses[0].glass.img_url;
         const imgPlaceholder = './Cocktail_Bar_Image.webp'
-                const drinkContainer = document.getElementById('content-container1');
+               
                 const div1 = document.createElement('div');
         
             
@@ -140,7 +153,7 @@ foodBtn.addEventListener('click', () => {
             const instructions =element.instructions;
             const servings =element.servings;
             // const summary =element.summary;
-            const foodContainer = document.getElementById('content-container2');
+            
             
             
             
