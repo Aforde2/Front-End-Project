@@ -2,14 +2,14 @@ const drinkBtn = document.getElementById('cocktail-button');
 const foodBtn = document.getElementById('food-button');
 const input = document.getElementById('query');
 const searchFoodBtn = document.getElementById('searchFood');
-const searchDrinkBtn = document.getElementById('searchDrink')
-const userInput = document.getElementById('userSearch')
-const userSelectionDisplay = document.getElementById('userSelectionDisplay')
+const searchDrinkBtn = document.getElementById('searchDrink');
+const userInput = document.getElementById('userSearch');
+const userSelectionDisplay = document.getElementById('userSelectionDisplay');
 const drinkContainer = document.getElementById('content-container1');
 const foodContainer = document.getElementById('content-container2');
 let randomNum = Math.floor(Math.random() * (20 - 1 + 1) + 1); //<== random number between 1-20
 console.log(randomNum);
-
+//search bar functionality
 searchDrinkBtn.addEventListener("click", (e) => {
     e.preventDefault()
     const reqValues = {
@@ -36,11 +36,9 @@ searchDrinkBtn.addEventListener("click", (e) => {
             </div>
             </div>
             `
-            drinkContainer.appendChild(newDiv)  
+            drinkContainer.appendChild(newDiv);
             
-            {/* <img src="${imgPlaceholder}" />
-            <h2>${name}</h2>
-            <h6>${description}</h6> */}
+            
 
 
 
@@ -98,9 +96,7 @@ fetch(`https://drinks-digital1.p.rapidapi.com/v1/cocktails?limit=20`, options)
                 const cocktailName = data[randomNum].cocktail_name;
                 const description = data[randomNum].description;
                 const garnish = data[randomNum].garnish;
-        //         // const ingredient = element.ingredients.ingredient.name;
-        //         const img_src2 = element.glasses[0].glass.img_url;
-        const imgPlaceholder = './Cocktail_Bar_Image.webp'
+        const imgPlaceholder = './Cocktail_Bar_Image.webp';
                
                 const div1 = document.createElement('div');
         
@@ -124,13 +120,7 @@ fetch(`https://drinks-digital1.p.rapidapi.com/v1/cocktails?limit=20`, options)
 
     
     });
-//     const url1 = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Vodka';
-    
-// async function getDrinks(${url1}){
-//     const x = await
-// }
 
-//});
 
 
 
@@ -138,7 +128,7 @@ fetch(`https://drinks-digital1.p.rapidapi.com/v1/cocktails?limit=20`, options)
 const key = 'cae44d7078c3414a8f7abd3a8419364a';
 
 
-// searchBtn.addEventListener('input', () => {
+
 
 foodBtn.addEventListener('click', () => {
     fetch(`https://api.spoonacular.com/recipes/random?number=10&apiKey=cae44d7078c3414a8f7abd3a8419364a`)
