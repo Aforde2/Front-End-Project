@@ -29,9 +29,9 @@ searchDrinkBtn.addEventListener("click", (e) => {
             const imgPlaceholder = './Cocktail_Bar_Image.webp'
             newDiv.innerHTML = `
             <div id="drink-search" class="card" style="width: 18rem;">
-            <img src="${imgPlaceholder}" class="card-img-top" >
+            <img src="${imgPlaceholder}" id="drink-search-img" class="card-img-top" >
             <div class="card-body"> 
-            <h2 class="card-text">${name}</h2>
+            <h3 class="card-text">${name}</h3>
             <h6 class="card-footer">${description}</h6>
             </div>
             </div>
@@ -60,9 +60,9 @@ searchFoodBtn.addEventListener("click", (e) => {
         let servings = data.menuItems[0].servings.number
         newDiv.innerHTML = `
         <div id="food-search" class="card" style="width: 18rem;">
-        <img src="${image}" class="card-img-top" >
+        <img src="${image}" id="food-search-img" class="card-img-top" >
         <div class="card-body"> 
-        <h2 class="card-text">${title}</h2>
+        <h3 class="card-text">${title}</h3>
         <h6 class="card-footer">${servings}</h6>
         </div>
         </div>
@@ -105,7 +105,7 @@ fetch(`https://drinks-digital1.p.rapidapi.com/v1/cocktails?limit=20`, options)
            
             <img src="${imgPlaceholder}" div id="drinkImage" alt="placeholder-image"/>
             <h3>${cocktailName}</h3>
-            <p class="card text-center"><small class="text-muted">serves: ${garnish}</small></p>
+            <p id ="garnish" class="card text-center"><small class="text-muted">serves: ${garnish}</small></p>
 
             <div class="card-body">
               <p class="card-text"><small>${description}</small></p>
@@ -150,7 +150,7 @@ foodBtn.addEventListener('click', () => {
         foodContainer.innerHTML = `<div id="foodCard" class="card w-60" style="width: 20rem; height: auto;">
         <img src="${img_src}" div id="foodImage" class="card-img-top" alt="...">
         <h3>${title}</h3>
-        <p class="card text-center"><small class="text-muted">serves: ${servings}</small></p>
+        <p id="servings" class="card text-center"><small class="text-muted">serves: ${servings}</small></p>
         <div class="card-body">
         <p class="card-text"><small>${instructions}</small></p>
         </div>
