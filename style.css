@@ -18,7 +18,6 @@ img {
 }
 
 form {
-    /* margin-left: 770px; */
     display: flex;
     flex-direction: row;
 }
@@ -41,6 +40,20 @@ form {
     left: 70%;
     margin-top: 12.5rem;
     background-color: #92b9dd;
+}
+
+#content-container1 {
+    position: relative;
+    margin-left: 18.75rem;
+    margin-top: 3.125rem;
+    
+}
+
+
+    #content-container2 {
+    margin-top: 3.125rem;
+    margin-left: 3.5rem;
+    
 }
 
 h1 {
@@ -77,31 +90,34 @@ margin-top: 6.25rem;
 #foodCard {
 background-color: #92b9dd;
 text-align: center;
+font-size: small;
+font-style: bold;
 }
 
 #foodImage {
-margin-left: 3.75rem;
+margin-left: 3.25rem;
 margin-top: 0.625rem;
+}
+
+#servings {
+    background-color: #25374a;
+    
 }
 
 #drinkCard {
 background-color: #92b9dd;
 text-align: center;
+font-size: small;
 }
 
 #drinkImage {
-margin-left: 3.75rem;
+margin-left: 3.25rem;
 margin-top: 0.625rem;   
 }
 
-#content-container1 {
-position: relative;
-margin-left: 18.75rem;
-margin-top: 3.125rem;
-}
-
-#content-container2 {
-margin-top: 3.125rem;
+#garnish {
+    background-color: #25374a;
+    
 }
 
 #searchFood {
@@ -109,10 +125,34 @@ margin-top: 3.125rem;
     border: #92b9dd;
 }
 
+#food-search {
+    background-color: #92b9dd;
+    text-align: center;
+    font-size: small;
+}
+
+#food-search-img {
+    margin-left: 1.9rem;
+    margin-top: 0.2rem;
+}
+
 #searchDrink {
     background-color: #92b9dd;
     border: #92b9dd;
 }
+
+#drink-search {
+   background-color: #92b9dd;
+   text-align: center; 
+   font-size: small;
+}
+
+#drink-search-img {
+    margin-left: 1.9rem;
+    margin-top: 0.2rem;
+    filter:blur(0.06rem);
+}
+
 
 @media  (max-width:500px) {
     body {
@@ -148,7 +188,7 @@ margin-top: 3.125rem;
 
     }
     #searchDrink {
-        
+
     }
     
 
